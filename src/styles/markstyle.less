@@ -1,0 +1,809 @@
+.warpContainer{
+    // 为了不起冲突，将md样式包裹起来 
+
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+    margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: Georgia, Palatino, serif;
+}
+h1, h2, h3, h4, h5, p , dl{
+    margin-bottom: 16px;
+    padding: 0;
+}
+h1 {
+    font-size: 48px;
+    line-height: 54px;
+}
+h2 {
+    font-size: 36px;
+    line-height: 42px;
+}
+h1, h2 {
+    border-bottom: 1px solid #EFEAEA;
+    padding-bottom: 10px;
+}
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+h4 {
+    font-size: 21px;
+    line-height: 26px;
+}
+h5 {
+    font-size: 18px;
+    list-style: 23px;
+}
+a {
+    color: #3eaf7c;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+a:visited {
+    /*color: purple;*/
+}
+ul, ol {
+    padding: 0;
+    padding-left: 24px;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+}
+p, ul, ol {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ol ol, ul ol {
+    list-style-type: lower-roman;
+}
+
+/*pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 13px;
+}*/
+
+pre {
+    border-radius: 3px;
+    background-color:#f7f7f7;
+    color: inherit;
+}
+
+
+pre {
+    line-height: 1.7em;
+    overflow: auto;
+    padding: 6px 10px;
+    border-left: 5px solid #3eaf7c;
+}
+
+pre > code {
+    border: 0;
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    font-size: .85em;
+    white-space: pre;
+    background: 0 0;
+
+}
+
+code {
+    // color: #d63200;
+}
+
+
+/** markdown preview plus 对于代码块的处理有些问题, 所以使用统一的颜色 */
+/*code .keyword {
+  color: #8959a8;
+}
+
+code .number {
+  color: #f5871f;
+}
+
+code .comment {
+  color: #998
+}*/
+
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.3em solid #3eaf7c;
+    padding: 0 0 0 1em;
+    margin-left:0;
+    background-color: #f8f8f8;
+}
+blockquote  cite {
+    font-size:.8rem;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {
+    color: #666;
+}
+hr {
+    text-align: left;
+    color: #999;
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+}
+
+dl {
+    padding: 0;
+}
+
+dl dt {
+    padding: 10px 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+dd {
+    margin-left: 0;
+}
+
+/* Code below this line is copyright Twitter Inc. */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+button, input {
+    line-height: normal;
+    *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+    margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+    display: inline-block;
+    width: 210px;
+    padding: 4px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    height: 18px;
+    color: #808080;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+select, input[type=file] {
+    height: 27px;
+    line-height: 27px;
+}
+textarea {
+    height: auto;
+}
+/* grey out placeholders */
+:-moz-placeholder {
+    color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+    color: #bfbfbf;
+}
+input[type=text],
+input[type=password],
+select,
+textarea {
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    outline: none;
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+/* buttons */
+button {
+    display: inline-block;
+    padding: 4px 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #0064cd;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+    background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+    background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+    background-image: linear-gradient(top, #049cdb, #0064cd);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #004b9a;
+    border-bottom-color: #003f81;
+    -webkit-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    border-color: #0064cd #0064cd #003f81;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+    color: #fff;
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+button:active {
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+}
+table {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    /*-webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;   */
+}
+table tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+table td, .table th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    /*-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;*/
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    padding: 5px;
+}
+
+table td:first-child, table th:first-child {
+    border-left: none;
+}
+
+table th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+table th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+table th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+table tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+table tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+code[class*="language-"],
+ pre[class*="language-"] {
+   padding: 0;
+   background: hsl(230, 1%, 98%);
+   color: hsl(230, 8%, 24%);
+   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+   direction: ltr;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   line-height: 1.5;
+   -moz-tab-size: 2;
+   -o-tab-size: 2;
+   tab-size: 2;
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
+ 
+ /* Selection */
+ code[class*="language-"]::-moz-selection,
+ code[class*="language-"] *::-moz-selection,
+ pre[class*="language-"] *::-moz-selection {
+   background: hsl(230, 1%, 90%);
+   color: inherit;
+ }
+ 
+ code[class*="language-"]::selection,
+ code[class*="language-"] *::selection,
+ pre[class*="language-"] *::selection {
+   background: hsl(230, 1%, 90%);
+   color: inherit;
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 1em;
+   margin: 0.5em 0;
+   overflow: auto;
+   border-radius: 0.3em;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: 0.2em 0.3em;
+   border-radius: 0.3em;
+   white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.prolog,
+ .token.cdata {
+   color: hsl(230, 4%, 64%);
+ }
+ 
+ .token.doctype,
+ .token.punctuation,
+ .token.entity {
+   color: hsl(230, 8%, 24%);
+ }
+ 
+ .token.attr-name,
+ .token.class-name,
+ .token.boolean,
+ .token.constant,
+ .token.number,
+ .token.atrule {
+   color: hsl(35, 99%, 36%);
+ }
+ 
+ .token.keyword {
+   color: hsl(301, 63%, 40%);
+ }
+ 
+ .token.property,
+ .token.tag,
+ .token.symbol,
+ .token.deleted,
+ .token.important {
+   color: hsl(5, 74%, 59%);
+ }
+ 
+ .token.selector,
+ .token.string,
+ .token.char,
+ .token.builtin,
+ .token.inserted,
+ .token.regex,
+ .token.attr-value,
+ .token.attr-value > .token.punctuation {
+   color: hsl(119, 34%, 47%);
+ }
+ 
+ .token.variable,
+ .token.operator,
+ .token.function {
+   color: hsl(221, 87%, 60%);
+ }
+ 
+ .token.url {
+   color: hsl(198, 99%, 37%);
+ }
+ 
+ /* HTML overrides */
+ .token.attr-value > .token.punctuation.attr-equals,
+ .token.special-attr > .token.attr-value > .token.value.css {
+   color: hsl(230, 8%, 24%);
+ }
+ 
+ /* CSS overrides */
+ .language-css .token.selector {
+   color: hsl(5, 74%, 59%);
+ }
+ 
+ .language-css .token.property {
+   color: hsl(230, 8%, 24%);
+ }
+ 
+ .language-css .token.function,
+ .language-css .token.url > .token.function {
+   color: hsl(198, 99%, 37%);
+ }
+ 
+ .language-css .token.url > .token.string.url {
+   color: hsl(119, 34%, 47%);
+ }
+ 
+ .language-css .token.important,
+ .language-css .token.atrule .token.rule {
+   color: hsl(301, 63%, 40%);
+ }
+ 
+ /* JS overrides */
+ .language-javascript .token.operator {
+   color: hsl(301, 63%, 40%);
+ }
+ 
+ .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+   color: hsl(344, 84%, 43%);
+ }
+ 
+ /* JSON overrides */
+ .language-json .token.operator {
+   color: hsl(230, 8%, 24%);
+ }
+ 
+ .language-json .token.null.keyword {
+   color: hsl(35, 99%, 36%);
+ }
+ 
+ /* MD overrides */
+ .language-markdown .token.url,
+ .language-markdown .token.url > .token.operator,
+ .language-markdown .token.url-reference.url > .token.string {
+   color: hsl(230, 8%, 24%);
+ }
+ 
+ .language-markdown .token.url > .token.content {
+   color: hsl(221, 87%, 60%);
+ }
+ 
+ .language-markdown .token.url > .token.url,
+ .language-markdown .token.url-reference.url {
+   color: hsl(198, 99%, 37%);
+ }
+ 
+ .language-markdown .token.blockquote.punctuation,
+ .language-markdown .token.hr.punctuation {
+   color: hsl(230, 4%, 64%);
+   font-style: italic;
+ }
+ 
+ .language-markdown .token.code-snippet {
+   color: hsl(119, 34%, 47%);
+ }
+ 
+ .language-markdown .token.bold .token.content {
+   color: hsl(35, 99%, 36%);
+ }
+ 
+ .language-markdown .token.italic .token.content {
+   color: hsl(301, 63%, 40%);
+ }
+ 
+ .language-markdown .token.strike .token.content,
+ .language-markdown .token.strike .token.punctuation,
+ .language-markdown .token.list.punctuation,
+ .language-markdown .token.title.important > .token.punctuation {
+   color: hsl(5, 74%, 59%);
+ }
+ 
+ /* General */
+ .token.bold {
+   font-weight: bold;
+ }
+ 
+ .token.comment,
+ .token.italic {
+   font-style: italic;
+ }
+ 
+ .token.entity {
+   cursor: help;
+ }
+ 
+ .token.namespace {
+   opacity: 0.8;
+ }
+ 
+ /* Plugin overrides */
+ /* Selectors should have higher specificity than those in the plugins' default stylesheets */
+ 
+ /* Show Invisibles plugin overrides */
+ .token.token.tab:not(:empty):before,
+ .token.token.cr:before,
+ .token.token.lf:before,
+ .token.token.space:before {
+   color: hsla(230, 8%, 24%, 0.2);
+ }
+ 
+ /* Toolbar plugin overrides */
+ /* Space out all buttons and move them away from the right edge of the code block */
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item {
+   margin-right: 0.4em;
+ }
+ 
+ /* Styling the buttons */
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
+   background: hsl(230, 1%, 90%);
+   color: hsl(230, 6%, 44%);
+   padding: 0.1em 0.4em;
+   border-radius: 0.3em;
+ }
+ 
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+   background: hsl(230, 1%, 78%); /* custom: darken(--syntax-bg, 20%) */
+   color: hsl(230, 8%, 24%);
+ }
+ 
+ /* Line Highlight plugin overrides */
+ /* The highlighted line itself */
+ .line-highlight.line-highlight {
+   background: hsla(230, 8%, 24%, 0.05);
+ }
+ 
+ /* Default line numbers in Line Highlight plugin */
+ .line-highlight.line-highlight:before,
+ .line-highlight.line-highlight[data-end]:after {
+   background: hsl(230, 1%, 90%);
+   color: hsl(230, 8%, 24%);
+   padding: 0.1em 0.6em;
+   border-radius: 0.3em;
+   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); /* same as Toolbar plugin default */
+ }
+ 
+ /* Hovering over a linkable line number (in the gutter area) */
+ /* Requires Line Numbers plugin as well */
+ pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+   background-color: hsla(230, 8%, 24%, 0.05);
+ }
+ 
+ /* Line Numbers and Command Line plugins overrides */
+ /* Line separating gutter from coding area */
+ .line-numbers.line-numbers .line-numbers-rows,
+ .command-line .command-line-prompt {
+   border-right-color: hsla(230, 8%, 24%, 0.2);
+ }
+ 
+ /* Stuff in the gutter */
+ .line-numbers .line-numbers-rows > span:before,
+ .command-line .command-line-prompt > span:before {
+   color: hsl(230, 1%, 62%);
+ }
+ 
+ /* Match Braces plugin overrides */
+ /* Note: Outline colour is inherited from the braces */
+ .rainbow-braces .token.token.punctuation.brace-level-1,
+ .rainbow-braces .token.token.punctuation.brace-level-5,
+ .rainbow-braces .token.token.punctuation.brace-level-9 {
+   color: hsl(5, 74%, 59%);
+ }
+ 
+ .rainbow-braces .token.token.punctuation.brace-level-2,
+ .rainbow-braces .token.token.punctuation.brace-level-6,
+ .rainbow-braces .token.token.punctuation.brace-level-10 {
+   color: hsl(119, 34%, 47%);
+ }
+ 
+ .rainbow-braces .token.token.punctuation.brace-level-3,
+ .rainbow-braces .token.token.punctuation.brace-level-7,
+ .rainbow-braces .token.token.punctuation.brace-level-11 {
+   color: hsl(221, 87%, 60%);
+ }
+ 
+ .rainbow-braces .token.token.punctuation.brace-level-4,
+ .rainbow-braces .token.token.punctuation.brace-level-8,
+ .rainbow-braces .token.token.punctuation.brace-level-12 {
+   color: hsl(301, 63%, 40%);
+ }
+ 
+ /* Diff Highlight plugin overrides */
+ /* Taken from https://github.com/atom/github/blob/master/styles/variables.less */
+ pre.diff-highlight > code .token.token.deleted:not(.prefix),
+ pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+   background-color: hsla(353, 100%, 66%, 0.15);
+ }
+ 
+ pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
+ pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
+ pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+ pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+   background-color: hsla(353, 95%, 66%, 0.25);
+ }
+ 
+ pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection,
+ pre.diff-highlight > code .token.token.deleted:not(.prefix) *::selection,
+ pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection,
+ pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
+   background-color: hsla(353, 95%, 66%, 0.25);
+ }
+ 
+ pre.diff-highlight > code .token.token.inserted:not(.prefix),
+ pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+   background-color: hsla(137, 100%, 55%, 0.15);
+ }
+ 
+ pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
+ pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
+ pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+   background-color: hsla(135, 73%, 55%, 0.25);
+ }
+ 
+ pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection,
+ pre.diff-highlight > code .token.token.inserted:not(.prefix) *::selection,
+ pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection,
+ pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
+   background-color: hsla(135, 73%, 55%, 0.25);
+ }
+ 
+ /* Previewers plugin overrides */
+ /* Based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-light-ui */
+ /* Border around popup */
+ .prism-previewer.prism-previewer:before,
+ .prism-previewer-gradient.prism-previewer-gradient div {
+   border-color: hsl(0, 0, 95%);
+ }
+ 
+ /* Angle and time should remain as circles and are hence not included */
+ .prism-previewer-color.prism-previewer-color:before,
+ .prism-previewer-gradient.prism-previewer-gradient div,
+ .prism-previewer-easing.prism-previewer-easing:before {
+   border-radius: 0.3em;
+ }
+ 
+ /* Triangles pointing to the code */
+ .prism-previewer.prism-previewer:after {
+   border-top-color: hsl(0, 0, 95%);
+ }
+ 
+ .prism-previewer-flipped.prism-previewer-flipped.after {
+   border-bottom-color: hsl(0, 0, 95%);
+ }
+ 
+ /* Background colour within the popup */
+ .prism-previewer-angle.prism-previewer-angle:before,
+ .prism-previewer-time.prism-previewer-time:before,
+ .prism-previewer-easing.prism-previewer-easing {
+   background: hsl(0, 0%, 100%);
+ }
+ 
+ /* For angle, this is the positive area (eg. 90deg will display one quadrant in this colour) */
+ /* For time, this is the alternate colour */
+ .prism-previewer-angle.prism-previewer-angle circle,
+ .prism-previewer-time.prism-previewer-time circle {
+   stroke: hsl(230, 8%, 24%);
+   stroke-opacity: 1;
+ }
+ 
+ /* Stroke colours of the handle, direction point, and vector itself */
+ .prism-previewer-easing.prism-previewer-easing circle,
+ .prism-previewer-easing.prism-previewer-easing path,
+ .prism-previewer-easing.prism-previewer-easing line {
+   stroke: hsl(230, 8%, 24%);
+ }
+ 
+ /* Fill colour of the handle */
+ .prism-previewer-easing.prism-previewer-easing circle {
+   fill: transparent;
+ }
+}

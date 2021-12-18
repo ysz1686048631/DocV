@@ -1,0 +1,35 @@
+{
+    "direct": {
+        "name": "direct",
+        "zhName": "使用文档",
+        "children": [
+            {
+                "path": "home",
+                "pageName": "home",
+                "zhName": "介绍",
+                "Createtime": 1639624518000,
+                "tagType": "N"
+            },
+            {
+                "path": "docs",
+                "pageName": "docs",
+                "zhName": "快速上手",
+                "Createtime": 1639648788000,
+                "tagType": "N"
+            }
+        ]
+    },
+    "pages": {
+        "name": "pages",
+        "zhName": "其他",
+        "children": [
+            {
+                "path": "about",
+                "pageName": "about",
+                "zhName": "关于使用",
+                "Createtime": 1639719305000,
+                "tagType": "N"
+            }
+        ]
+    }
+}
