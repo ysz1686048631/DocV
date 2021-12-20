@@ -15,7 +15,6 @@ import { toRaw,defineProps,defineAsyncComponent  } from "vue";
 import {sildertoggle} from '@/utils/asyncToggle.js';
 const DoccLink = defineAsyncComponent(() => import("./link.vue"));
 
-
 const props = defineProps({
        showSilder:{
               type:Boolean,
@@ -27,7 +26,7 @@ const closeSilder = ()=>{
 }
 </script>
 <template>
-  <el-drawer custom-class="drawers" v-model="showSilder" direction="ltr" @close="closeSilder" size="60%" title="I am the title" :with-header="false">
+  <el-drawer custom-class="drawers" v-model="props.showSilder" direction="ltr" @close="closeSilder" size="60%" title="I am the title" :with-header="false">
       <div class="warpMiniSilder">
       <DoccLink/>
      </div>

@@ -95,12 +95,7 @@ watch(
     routerName.value = router.currentRoute.value;
   }
 );
-const props = defineProps({
-  showSilder: {
-    type: Boolean,
-    default: () => true,
-  },
-});
+
 const closeSilder = () => {
   sildertoggle(false);
 };
