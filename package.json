@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "vite": "vite",
+    "doc": "vite",
     "build": "vite build",
     "lint": "vue-cli-service lint",
     "create": "node ./src/package/index.js"

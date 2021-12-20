@@ -1,6 +1,7 @@
 <style lang="less" scoped>
 @import url('../../../styles/commit.less');
 @import url('../../../styles/container.less');
+
 </style>
 <script setup>
 import Prism from "prismjs";
@@ -20,7 +21,7 @@ Prism.highlightAll();
 <template>
        <div class="warpContainer">
            <div>
-                  <router-view v-slot="{Component}">
+               <router-view v-slot="{Component}">
                   <transition
                     :name="transitions"
                   >
@@ -29,9 +30,8 @@ Prism.highlightAll();
                   </keep-alive>
                   </transition> 
               </router-view>
-               <el-divider></el-divider>
+             
               <DoccFooter></DoccFooter>
-           
            </div>
        </div>
 </template>
