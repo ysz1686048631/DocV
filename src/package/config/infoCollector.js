@@ -6,7 +6,6 @@ const kebabCase = string => string
   .replace(/[\s_]+/g, '-')
   .toLowerCase();
 module.exports = async () => {
-  // 定义输入命令
   const meta = await inquirer
     .prompt([
       {

@@ -2,7 +2,6 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import { initRouter } from '../utils/asyncRouter';
 export const Comppath =   initRouter();
 
-// 基础路由设置
 const routes = [{
   title: 'Root',
   name: 'Root',

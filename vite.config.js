@@ -20,8 +20,6 @@ export default ({ command, mode }) => {
       html({
         minify: false,
         inject: {
-          // Inject data into ejs template
-          // 在html中使用<%= title %> 来渲染
           data: {
             title: env.VITE_GLOB_APP_TITLE,
           }
@@ -36,7 +34,6 @@ export default ({ command, mode }) => {
 
     },
     logLevel: 'info',
-    // 解决路径权限报错：is outside of Vite serving allow list
     server: {
       fs: {
         allow: [

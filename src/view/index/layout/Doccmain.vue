@@ -6,7 +6,6 @@
 <script setup>
 import Prism from "prismjs";
 
-// 代码高亮
 Prism.highlightAll();
    import { defineProps,defineAsyncComponent,watch } from 'vue';
    const props = defineProps({

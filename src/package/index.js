@@ -3,7 +3,6 @@ const tplreplace = require('./config/tplreplace')
 
 async function run() {  
 
-  // 执行命令 
   const meta = await infoCollector();
   if(!meta.compZhName || !meta.compName){
       throw console.error('必填选项存在空值！');

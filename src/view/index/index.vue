@@ -20,7 +20,7 @@ import useWindowsize from "@/hooks/useWindowSize.js";
 import {sildertogglebar} from '@/utils/asyncToggle.js';
 import {sysConfig} from '@/package/config.js';
 import useCopytext from '@/hooks/useCopyText.js';
-// 监听复制
+
 useCopytext()
 const DoccHeader = defineAsyncComponent(() =>
   import("./layout/Doccheader.vue")

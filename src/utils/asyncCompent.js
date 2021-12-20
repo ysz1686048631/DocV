@@ -8,7 +8,7 @@ function getModules() {
   return components
 }
 function getComponents() {
-  // 将所有带有.vue文件都归为组件处理，如果是单纯的文档 可以移除掉.vue文件与.js文件
+
   const components = import.meta.globEager('../components/**/*.vue')
   return components
 }
@@ -19,8 +19,7 @@ export const getCompPath = ()=>{
     for(let item in components){
         paths.push({
               name:components[item].default['name'],
-            //   需要用vite规定的导入方式导入,否则打包后部署到服务器报错找不到动态导入的文件,
-            //   使用/* @vite-ignore */则不会在开发是报错
+      
               module:defineComponent(components[item].default)
         })
     }

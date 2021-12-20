@@ -10,11 +10,10 @@ export const sysConfig = {
              name:'github',
              path:'https://gitee.com/shaohqfspace/doc-v' 
          },
-         transitions:'fade-slide',  // 动画地址
+         transitions:'fade-slide', 
          copys:{
               copyStatu:true,
               copyText:'\n复制来源：DocV文档' 
          },
-         //  首页加载动画
          
 }
