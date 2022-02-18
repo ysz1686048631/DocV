@@ -12,9 +12,13 @@
       display: flex;
       align-items: center;
       &>div:nth-of-type(1){
-         width: 2.6rem;
-         height: 2.6rem;
+         width: 2.3rem;
+         height: 2.3rem;
            margin-right: 1rem;
+           img{
+             width: 100%;
+             height: 100%;
+           }
       }
        &>div:nth-of-type(2){
             font-weight: bold;

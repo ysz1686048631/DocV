@@ -12,6 +12,10 @@ li {
     height: 2rem;
     margin: 0 auto;
     margin-top: 1rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
   &_userinfo {
     padding: 1.5rem;
